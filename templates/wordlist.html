@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    {% for word in wordlist: %}
+        <div class="wordbox" onclick="main(this);popup();">
+        	{{ word }}
+        </div>
+    {% endfor %}
+</main>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="popuptext"></p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block wordjavascript %}
+<script src="/static/wordscript.js"></script>
+{% endblock %}
